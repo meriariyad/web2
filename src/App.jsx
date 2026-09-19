@@ -5,6 +5,7 @@ import Register from './register';
 import Dashboard from './dashboard';
 import useUserState from './useUserState';
 import './App.css';
+import ContactCard from './contactcard';
 
 function App() {
   const { user, setUser, isLoggedIn, login, logout } = useUserState();
@@ -26,6 +27,7 @@ function App() {
             path="/register"
             element={<Register isLoggedIn={isLoggedIn} />}
           />
+          <Route path="/contact"element={<ContactCard/>}/>
           <Route
             path="/dashboard"
             element={
